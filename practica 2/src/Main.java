@@ -34,7 +34,6 @@ public class Main {
         double y=1.25, y2;
         String z= "204", z1;
 
-
         //Conversion de cadena a int
         x2= Integer.parseInt(z);
 
@@ -48,7 +47,6 @@ public class Main {
         int num= 12;
         double numD= num;
         System.out.println("Conversion Implicita"+num);
-
 
         System.out.println(x2);
         System.out.println(z1);
@@ -95,6 +93,6 @@ public class Main {
         int x= 3;
         System.out.println(x< 5 && x>10); //false
         System.out.println(x< 5 || x>10); //true
-        System.out.println(|(x< 5 && x>10)); //true
+        System.out.println(!(x< 5 && x>10)); //true
     }
 }
