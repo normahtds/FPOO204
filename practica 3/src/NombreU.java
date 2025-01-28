@@ -1,4 +1,4 @@
-
+/*
 import java.util.Scanner;
 
 public class NombreU {
@@ -17,3 +17,4 @@ public class NombreU {
         System.out.println(nombremayus + " tiene " + letras + " letras");
     }
 }
+*/
