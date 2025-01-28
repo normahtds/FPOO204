@@ -1,4 +1,4 @@
-
+/*
 import java.util.Scanner;
 
 public class usuario {
@@ -38,3 +38,4 @@ public class usuario {
         System.out.println(user.toString());
     }
 }
+*/
