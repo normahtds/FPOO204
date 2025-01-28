@@ -1,4 +1,4 @@
-
+/*
 import java.util.Scanner;
 
 public class Entero {
@@ -17,3 +17,4 @@ public class Entero {
         System.out.println("La suma de los numeros enteros es: " + suma);
     }
 }
+*/
