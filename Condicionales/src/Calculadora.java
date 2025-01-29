@@ -5,7 +5,6 @@ public class Calculadora {
     public static void main(String[] args) {
         Scanner ope = new Scanner(System.in);
 
-
         System.out.println("Ingrese un numero: ");
         double num = ope.nextDouble();
 
@@ -16,8 +15,6 @@ public class Calculadora {
 
         System.out.println("Escoge una opcion: ");
         char opcion = ope.next().charAt(0);
-
-
 
         double resultado = 0;
         boolean validar = true;
