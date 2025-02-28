@@ -1,6 +1,5 @@
 import javax.swing.JOptionPane;
 
-
 public class Envio {
     //atributos colocados y privados
     private String codigoEnvio;
@@ -13,7 +12,6 @@ public class Envio {
     }
 
     public Envio() {
-
         this.codigoEnvio = codigoEnvio;
         this.destino = destino;
         this.peso = peso;
