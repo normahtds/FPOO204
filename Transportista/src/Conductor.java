@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class Conductor {
-
+    //atributos colocados y privados
     private String nombre;
     private int identificacion;
     private int licencia;
@@ -20,6 +20,7 @@ public class Conductor {
         this.licencia = Integer.parseInt(licen);
 
     }
+    //get y set de los atributos
     public String getNombre() {
         return nombre;
     }
@@ -35,9 +36,17 @@ public class Conductor {
     public int getLicencia() {
         return licencia;
     }
+
+    //metodos que necesitan para utilizar la clase Conductor
     public void RegistrarConductor() {
         JOptionPane.showMessageDialog(null, "El conductor se ha registrado: \n"
         + "Nombre: " + nombre + "\n"
+        + "Identificacion: " + identificacion + "\n"
+        + "Licencia: " + licencia);
+    }
+
+    public void mostrarConductor() {
+        JOptionPane.showInputDialog(null, "Nombre: " + nombre + "\n"
         + "Identificacion: " + identificacion + "\n"
         + "Licencia: " + licencia);
     }

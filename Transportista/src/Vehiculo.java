@@ -2,9 +2,11 @@ import javax.swing.JOptionPane;
 
 public class Vehiculo {
 
+    //atributos colocados y privados
     private String modelo;
     private int placa;
     private int capacidadCarga;
+    private Conductor conductor;
 
     public Vehiculo() {
 
@@ -20,6 +22,7 @@ public class Vehiculo {
         String capacidad = JOptionPane.showInputDialog("Ingrese la capacidad de carga del vehiculo: ");
         this.capacidadCarga = Integer.parseInt(capacidad);
     }
+    //get y set de los atributos
     public String getModelo() {
         return modelo;
     }
@@ -44,11 +47,35 @@ public class Vehiculo {
         this.capacidadCarga = capacidadCarga;
     }
 
+    public Conductor getConductor() {return conductor;}
+
+    //metodos que necesitan para utilizar la clase Vehiculo y su relacion con la clase Conductor
+    public void asignarConductor(Conductor conductor) {
+        if (this.conductor == null) {
+            this.conductor = conductor;
+            JOptionPane.showMessageDialog(null, "Conductor asignado correctamente");
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "El vehiculo ya tiene conductor asignado");
+        }
+    }
+
     public void registrarVehiculo() {
         JOptionPane.showMessageDialog(null, "El vehiculo se ha registrado: \n"
         + "Modelo: " + modelo + "\n"
         + "Placa: " + placa + "\n"
         + "Capacidad de carga: " + capacidadCarga);
-
+    }
+    public void mostrarVehiculoConductor() {
+        String mensa = "Modelo: " + modelo + "\n"
+        + "Placa: " + placa + "\n"
+        + "Capacidad de carga (kg): " + capacidadCarga;
+        if (conductor != null) {
+            mensa += "\nConductor asignado: :" + conductor.getNombre();
+        }
+        else {
+            mensa += "\nConductor no encontrado";
+        }
+        JOptionPane.showMessageDialog(null, mensa);
     }
 }
