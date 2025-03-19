@@ -70,8 +70,7 @@ public class Usuario {
 
     public void mostrarInfo() {
         Random rand = new Random();
-        int numero = r
-        and.nextInt();
+        int numero = rand.nextInt();
         if (numero >= 2)
 
         JOptionPane.showMessageDialog(null,"Su matricula es: " + nombre.substring(0,1)
