@@ -134,7 +134,7 @@ public class FormConsulta extends javax.swing.JFrame {
     private void btnTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTodosActionPerformed
         
         ResultSet todos= crud.obtenerTodos();
-        DefaultTableModel modeloT= (DefaultTableModel) jTablel.getModel();
+        DefaultTableModel modeloT= (DefaultTableModel) jTable1.getModel();
         modeloT.setNumRows(0);
         
         try{
@@ -165,7 +165,7 @@ public class FormConsulta extends javax.swing.JFrame {
         modelo.setRowCount(0);
         
         if(rs.next()){
-            modelo.addRow(new Object[]{rs.getInt("id"),rs.getString("bombre"),rs.getString("correo"),rs.getString("contrasena")});
+            modelo.addRow(new Object[]{rs.getInt("id"),rs.getString("nombre"),rs.getString("correo"),rs.getString("contrasena")});
         }
     }
         catch(SQLException e){
