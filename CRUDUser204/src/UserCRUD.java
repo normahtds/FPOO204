@@ -65,7 +65,7 @@ public class UserCRUD {
     }
     public boolean UpdateUsuario(String nombre, String correo, String contrasena){
         
-        String UpdateSQL= "UPDATE INTO usuarios(nombre, correo, contrasena)";
+        String UpdateSQL= "UPDATE usuarios SET nombre= ?, correo= ?, contrasena= ?";
         
         try{
             PreparedStatement ps= conexion.prepareStatement(UpdateSQL);

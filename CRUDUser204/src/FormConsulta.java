@@ -21,7 +21,7 @@ public class FormConsulta extends javax.swing.JFrame {
      */
     public FormConsulta() {
         initComponents();
-        crud = new UserCRUD;
+        crud = new UserCRUD();
     }
 
     /**

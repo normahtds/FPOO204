@@ -21,7 +21,7 @@ public class FormActualizar extends javax.swing.JFrame {
      */
     public FormActualizar() {
         initComponents();
-        crud= new UserCRUD;
+        this.crud= new UserCRUD();
     }
 
     /**
@@ -82,6 +82,11 @@ public class FormActualizar extends javax.swing.JFrame {
         });
 
         btnGuardarD.setText("Guardar datos");
+        btnGuardarD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarDActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,14 +164,30 @@ public class FormActualizar extends javax.swing.JFrame {
         }
     }
         catch(SQLException e){
-            System.out.println("Error al llenar la tabla: "+ e.getMessage());
+            System.out.println("Usuario no encontrado"+ e.getMessage());
         }
     }//GEN-LAST:event_btnBuscarIActionPerformed
 
     private void btnEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarUsuarioActionPerformed
         // TODO add your handling code here:
-        
+        jTable1.setDefaultEditor(Object.class, new javax.swing.DefaultCellEditor (new JTextField()));
     }//GEN-LAST:event_btnEditarUsuarioActionPerformed
+
+    private void btnGuardarDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarDActionPerformed
+        // TODO add your handling code here:
+        int apartado= jTable1.getSelectedRow();
+        int id= (int)jTable1.getValueAt(apartado, 0);
+        String nuevoNombre= (String) jTable1.getValueAt(apartado, 1);
+        String nuevoCorreo= (String) jTable1.getValueAt(apartado, 2);
+        String nuevoContrasena= (String) jTable1.getValueAt(apartado, 3);
+        
+        int confirmacion= JOptionPane.showConfirmDialog(this, "Actualizar los datos", "Confirmar", JOptionPane.YES_NO_OPTION);
+        if(confirmacion == JOptionPane.YES_OPTION){
+                
+            
+        }
+    
+    }//GEN-LAST:event_btnGuardarDActionPerformed
 // fin de btn buscar Id
     /**
      * @param args the command line arguments
